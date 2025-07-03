@@ -1,0 +1,206 @@
+:root {
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #A8E6CF;
+  --secondary-color: #FFE29D;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.3rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  --site-max-width: 1300px;
+}
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login container */
+.wrapper {
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: var(--border-radius-m);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-header span {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--dark-color);
+}
+
+/* Input container */
+.input_box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.9rem 2.5rem 0.9rem 2.5rem;
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius-s);
+  background-color: var(--light-pink-color);
+  font-size: var(--font-size-n);
+  color: var(--dark-color);
+  transition: border 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--white-color);
+}
+
+.label {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-s);
+  color: var(--dark-color);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.input-field:focus + .label,
+.input-field:valid + .label {
+  top: -0.6rem;
+  left: 1rem;
+  background-color: var(--white-color);
+  padding: 0 0.3rem;
+  font-size: 0.75rem;
+  color: var(--primary-color);
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--dark-color);
+}
+
+/* Submit button */
+.input-submit {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  font-size: var(--font-size-n);
+  border: none;
+  border-radius: var(--border-radius-s);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-submit:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Remember & forgot */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-s);
+  margin-bottom: 1rem;
+}
+
+.remember-me label {
+  margin-left: 0.3rem;
+}
+
+.forgot a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Register section */
+.register {
+  text-align: center;
+  font-size: var(--font-size-s);
+}
+
+.register a {
+  text-decoration: none;
+  color: var(--dark-color);
+  margin-left: 0.3rem;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.register a:hover {
+  color: var(--primary-color);
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  border: none;
+  border-radius: var(--border-radius-s);
+  padding: 0.6rem 1rem;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button i {
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background-color: #ffd86e;
+  transform: translateX(-2px);
+}
+
+
